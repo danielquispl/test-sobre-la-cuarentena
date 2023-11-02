@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="cdn.js"></script>
+</head>
+
+<body>
+    <div class="col-md-4">
+        <form name="f1" id="f1" action="">
+            <!--enmarcamos el formulario-->
+            <fieldset>
+                <!--le damos un nombre al marco-->
+                <legend>CALCULO DEL PESO IDEAL IMC (Indice de Masa Corporal)</legend>
+                <div class="form-group">
+                    <label>Ingresa tu peso actual en kilos </label><br>
+                    <!--definimos una caja donde introducir el dato del peso-->
+                    <input type="text" alt="" style="width: 100px;" tabindex="2" maxlength="9" size="9" value=""
+                        id="peso" name="peso" placeholder="ej. 89" />
+                </div>
+                <div class="form-group">
+                    <label>Ingresa tu altura actual en cm </label><br>
+                    <!--definimos una caja donde introducir el dato de la altura-->
+                    <input type="text" style="width: 100px;" tabindex="1" maxlength="9" size="9" id="altura"
+                        name="altura" placeholder="ej. 178" /><br>
+                </div>
+                <input type="button" value="Calcular IMC" onClick="calculaIMC();" class="btn btn-primary" />
+                <div class="form-group">
+                    <label>IMC: </label><br>
+                    <!--definimos una caja donde la funcion devolvera el valor de imc calculado-->
+                    <input type="text" name="imc" id="imc" size="10" maxlength="15"><br>
+                    <label>Leyenda:</label><br>
+                    <!--definimos una caja donde la funcion escribira el comentario, definido en leyenda-->
+                    <input type="text" name="leyenda" id="leyenda" size="30">
+                </div>
+            </fieldset>
+        </form>
+        <h4>Clasificación OMS</h4>
+        <table class="table">
+            <thead style="font-weight: bold;">
+                <tr>
+                    <th scope="col">IMC</th>
+                    <th scope="col">Clasificación</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="list-group-item-danger">
+                    <td>
+                        <16.00>
+                    <td>Infrapeso: Delgadez Severa</td>
+                </tr>
+                <tr class="list-group-item-success">
+                    <td>16.00 - 16.99</td>
+                    <td>Infrapeso: Delgadez moderada</td>
+                </tr>
+                <tr class="list-group-item-info">
+                    <td>17.00 - 18.49</td>
+                    <td>Infrapeso: Delgadez aceptable</td>
+                </tr>
+                <tr class="list-group-item-info">
+                    <td>18.50 - 24.99</td>
+                    <td>Peso Normal</td>
+                </tr>
+                <tr class="list-group-item-warning">
+                    <td>25.00 - 29.99</td>
+                    <td>Sobrepeso</td>
+                </tr>
+                <tr class="list-group-item-danger">
+                    <td>30.00 - 34.99</td>
+                    <td>Obeso: Tipo I</td>
+                </tr>
+                <tr class="list-group-item-danger">
+                    <td>35.00 - 40.00</td>
+                    <td>Obeso: Tipo II</td>
+                </tr>
+                <tr class="list-group-item-danger">
+                    <td>>40.00</td>
+                    <td>Obeso: Tipo III</td>
+                </tr>
+                <script src="js/script.js"></script>
+            </tbody>
+        </table>
+    </div>
+    </div>
+    </div>
+
+    <div class="container border rounded bg-light">
+        <div class="row">
+            <h2 class="text-center">TEST BASICO EN LA CUARENTENA</h2>
+            <p class="text-center lead">
+                Existen muchos mitos y verdades sobre el nuevo coronavirus (n-Cov) detectado por primera vez en 2019 en
+                China. ¿Se transmite de animales a pesonas? Los primeros casos se detectaron en trabajadores de un
+                mercado donde había presencia de animales, pero aún la fuente de infección se encuentra bajo
+                investigación.
+            </p>
+            <div class="col-md-12">
+                <div class="jumbotron">
+                    <h3>Test básico</h3>
+                    <p>
+                        Responda cada una de las preguntas y le da enviar.
+                    </p>
+                    <!--test opciones-->
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
+                                data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane"
+                                aria-selected="true">01</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="profile-tab" data-bs-toggle="tab"
+                                data-bs-target="#profile-tab-pane" type="button" role="tab"
+                                aria-controls="profile-tab-pane" aria-selected="false">02</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab"
+                                data-bs-target="#contact-tab-pane" type="button" role="tab"
+                                aria-controls="contact-tab-pane" aria-selected="false">03</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" data-bs-toggle="tab"
+                                data-bs-target="#cuatro-tab" type="button" role="tab"
+                                aria-controls="cuatro-tab" aria-selected="false">04</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" data-bs-toggle="tab"
+                                data-bs-target="#cinco-tab" type="button" role="tab"
+                                aria-controls="cinco-tab" aria-selected="false">05</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" data-bs-toggle="tab"
+                                data-bs-target="#seis-tab" type="button" role="tab"
+                                aria-controls="seis-tab" aria-selected="false">06</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" data-bs-toggle="tab"
+                                data-bs-target="#siete-tab" type="button" role="tab"
+                                aria-controls="siete-tab" aria-selected="false">07</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link"  data-bs-toggle="tab"
+                                data-bs-target="#ocho-tab" type="button" role="tab"
+                                aria-controls="ocho-tab" aria-selected="false">08</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link"  data-bs-toggle="tab"
+                                data-bs-target="#nueve-tab" type="button" role="tab"
+                                aria-controls="nueve-tab" aria-selected="false">09</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link"  data-bs-toggle="tab"
+                                data-bs-target="#diez-tab" type="button" role="tab"
+                                aria-controls="diez-tab" aria-selected="false">10</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+                            tabindex="0">
+                            <h3>El termino virus proviene del latín, en griego se escribe ἰός y significa</h3>
+                            <p><input type="radio" name="pregunta2" id="p21">Pequeñísimo</p>
+                            <p><input type="radio" name="pregunta2" id="p22">Invisible</p>
+                            <p><input type="radio" name="pregunta2" id="p23">Toxina</p>
+                            <p><input type="radio" name="pregunta2" id="p24">Parásito</p>    
+                        </div>
+                        <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab"
+                            tabindex="0">
+                            <h3>El termino virus proviene del latín, en griego se escribe ἰός y significa</h3>
+                            <p><input type="radio" name="pregunta2" id="p21">Pequeñísimo</p>
+                            <p><input type="radio" name="pregunta2" id="p22">Invisible</p>
+                            <p><input type="radio" name="pregunta2" id="p23">Toxina</p>
+                            <p><input type="radio" name="pregunta2" id="p24">Parásito</p>    
+                        </div>
+                        <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab"
+                            tabindex="0">
+                            <h3>El virus es muy frágil, lo único que lo protege es una capa externa de lípido:</h3>
+                            <p><input type="radio" name="pregunta3" id="p31">Verdadero</p>
+                            <p><input type="radio" name="pregunta3" id="p32">Falso</p>
+                        </div>
+                        <div class="tab-pane fade" id="cuatro-tab" role="tabpanel" aria-labelledby="cuatro-tab"
+                            tabindex="0">
+                            <h3>¿Por qué hay que lavarnos las manos con jabón o detergente por 20 segundos o más para
+                                protegernos de los virus?</h3>
+                            <p><input type="radio" name="pregunta4" id="p41">Al estar limpios los virus no nos atacan
+                            </p>
+                            <p><input type="radio" name="pregunta4" id="p42">El jabón y detergente sirven como
+                                bactericidas</p>
+                            <p><input type="radio" name="pregunta4" id="p43">Porque se disuelve la grasa protectora del
+                                virus y este se desintegra</p>
+                            <p><input type="radio" name="pregunta4" id="p44">Porque se disuelve directamente la proteína
+                                que constituye el virus</p>
+                        </div>
+                        <div class="tab-pane fade" id="cinco-tab" role="tabpanel" aria-labelledby="cinco-tab"
+                            tabindex="0">
+                            <h3>No se debe usar antibióticos para eliminar los virus:</h3>
+                            <p><input type="radio" name="pregunta5" id="p51">Verdadero</p>
+                            <p><input type="radio" name="pregunta5" id="p52">Falso</p>
+                        </div>
+                        <div class="tab-pane fade" id="seis-tab" role="tabpanel" aria-labelledby="seis-tab"
+                            tabindex="0">
+                            <h3>¿Cuál es la proporción adecuada de cloro y agua qué disuelve la proteína del virus y lo
+                                desintegra por dentro?</h3>
+                            <p><input type="radio" name="pregunta6" id="p61">2 partes de cloro y 3 de agua</p>
+                            <p><input type="radio" name="pregunta6" id="p62">1 parte de cloro y 5 de agua</p>
+                            <p><input type="radio" name="pregunta6" id="p63">2 partes de cloro y 5 de agua</p>
+                            <p><input type="radio" name="pregunta6" id="p64">1 parte de cloro y 4 de agua</p>
+                        </div>
+                        <div class="tab-pane fade" id="siete-tab" role="tabpanel" aria-labelledby="siete-tab"
+                            tabindex="0">
+                            <h3>Proteína compleja que se encuentra en el núcleo de las células y constituye el principal
+                                constituyente del material genético de los seres vivos.</h3>
+                            <p><input type="radio" name="pregunta7" id="p71">ADN</p>
+                            <p><input type="radio" name="pregunta7" id="p72">ARN</p>
+                        </div>
+                        <div class="tab-pane fade" id="ocho-tab" role="tabpanel" aria-labelledby="ocho-tab"
+                            tabindex="0">
+                            <h3>¿Cuál es la proporción adecuada de cloro y agua qué disuelve la proteína del virus y lo
+                                desintegra por dentro?</h3>
+                            <p><input type="radio" name="pregunta6" id="p61">2 partes de cloro y 3 de agua</p>
+                            <p><input type="radio" name="pregunta6" id="p62">1 parte de cloro y 5 de agua</p>
+                            <p><input type="radio" name="pregunta6" id="p63">2 partes de cloro y 5 de agua</p>
+                            <p><input type="radio" name="pregunta6" id="p64">1 parte de cloro y 4 de agua</p>
+                        </div>
+                        <div class="tab-pane fade" id="nueve-tab" role="tabpanel" aria-labelledby="nueve-tab"
+                            tabindex="0">
+                            <h3>La luz ultravioleta sobre cualquier objeto que pueda contenerlo desintegra la proteína  del virus</h3>
+                            <p><input type="radio" name="pregunta6" id="p61">2 partes de cloro y 3 de agua</p>
+                            <p><input type="radio" name="pregunta6" id="p62">1 parte de cloro y 5 de agua</p>
+                            <p><input type="radio" name="pregunta6" id="p63">2 partes de cloro y 5 de agua</p>
+                            <p><input type="radio" name="pregunta6" id="p64">1 parte de cloro y 4 de agua</p>
+                        </div>
+                        <div class="tab-pane fade" id="diez-tab" role="tabpanel" aria-labelledby="diez-tab"
+                            tabindex="0">
+                            <h3>¿Cuál es la proporción adecuada de cloro y agua qué disuelve la proteína del virus y lo
+                                desintegra por dentro?</h3>
+                            <p><input type="radio" name="pregunta6" id="p61">2 partes de cloro y 3 de agua</p>
+                            <p><input type="radio" name="pregunta6" id="p62">1 parte de cloro y 5 de agua</p>
+                            <p><input type="radio" name="pregunta6" id="p63">2 partes de cloro y 5 de agua</p>
+                            <p><input type="radio" name="pregunta6" id="p64">1 parte de cloro y 4 de agua</p>
+                        </div>
+                    </div>
+
+                    <!--test opciones-->
+
+                    
+                    <div class="tab-content">
+                        <div id="menu6" class="tab-pane fade">
+                            <h3>Proteína compleja que se encuentra en el núcleo de las células y constituye el principal
+                                constituyente del material genético de los seres vivos.</h3>
+                            <p><input type="radio" name="pregunta7" id="p71">ADN</p>
+                            <p><input type="radio" name="pregunta7" id="p72">ARN</p>
+                        </div>
+                        <div id="menu7" class="tab-pane fade">
+                            <h3>El alcohol disuelve la capa lípido del virus, o cualquier mezcla con alcohol a más del:
+                            </h3>
+                            <p><input type="radio" name="pregunta8" id="p81">50%</p>
+                            <p><input type="radio" name="pregunta8" id="p82">60%</p>
+                            <p><input type="radio" name="pregunta8" id="p83">70%</p>
+                            <p><input type="radio" name="pregunta8" id="p84">10%</p>
+                        </div>
+                        <div id="menu8" class="tab-pane fade">
+                            <h3>Ácido nucleico que participa en la síntesis de las proteínas y realiza la función de
+                                mensajero de la información genética.</h3>
+                            <p><input type="radio" name="pregunta9" id="p91">DHA</p>
+                            <p><input type="radio" name="pregunta9" id="p92">DPA</p>
+                            <p><input type="radio" name="pregunta9" id="p93">ARN</p>
+                            <p><input type="radio" name="pregunta9" id="p94">ADN</p>
+                        </div>
+                        <div id="menu9" class="tab-pane fade">
+                            <h3>La luz ultravioleta sobre cualquier objeto que pueda contenerlo desintegra la proteína
+                                del virus:</h3>
+                            <p><input type="radio" name="pregunta10" id="p101">Verdadero</p>
+                            <p><input type="radio" name="pregunta10" id="p102">Falso</p>
+                        </div>
+                        <div id="resultado" class="tab-pane fade">
+                            <h3>Resultados del Test</h3>
+                            <input type="button" value=" R E S U L T A D O " onClick="resultado()"
+                                class="btn btn-primary" />
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
